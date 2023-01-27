@@ -43,7 +43,7 @@ export default function Hero() {
                     <p className="text-xl font-bold">ISLA</p>
                     <p className="text-lg font-medium">Komang Adi Wirawan</p>
                     <div className="bg-primary-400 w-8 h-[.175rem] my-auto"></div>
-                    <p className="font-light tracking-[.105rem] text-lg">PROJECT PORTFOLIO</p>
+                    <p className="font-light tracking-[.095rem] text-lg">PROJECT PORTFOLIO</p>
                     <div className="card__links w-full flex justify-center items-center mt-4 text-2xl gap-4">
                         <a href="https://github.com/mangadi3859" title="Github" target="_blank">
                             <FaGithub />

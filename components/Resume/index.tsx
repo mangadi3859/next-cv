@@ -25,31 +25,19 @@ export default function Resume({ katas, user, katasInfo }: IServerProps["codewar
                         })}
                     </div>
                 </div>
-                <div data-slide="up" className="codewar__solved-katas">
+                <div data-slide="up" className="codewar__solved-katas mt-20">
                     <div className="card__nav my-4 text-xl font-semibold">Solved Katas</div>
-                    <>
-                        <Swiper effect="cards" autoplay={{ delay: 7000 }} pagination={{ enabled: true, clickable: true }} speed={300} navigation={true} modules={[EffectCards, Navigation, Autoplay, Pagination]} slidesPerView="auto" className="mySwiper mx-auto w-1/2 aspect-[3/2]">
-                            {katasInfo
-                                .sort((a, b) => b.rank.id - a.rank.id)
-                                .map((e) => {
-                                    return (
-                                        <SwiperSlide>
-                                            <KataCard solved={katas.data.find((el) => el.id == e.id)} kata={e} />
-                                        </SwiperSlide>
-                                    );
-                                })}
-                        </Swiper>
-                    </>
-
-                    {/* <Swiper className="items-center aspect-[3/2] w-[30rem] mx-auto overflow-visible" centeredSlides={true} autoplay={true} autoHeight={true} spaceBetween={100} slidesPerView="auto" speed={400} effect="cards" modules={[EffectCards, Autoplay, Controller]} cardsEffect={{}}>
-                        {katasInfo.slice(0, 3).map((e) => {
-                            return (
-                                <SwiperSlide>
-                                    <KataCard kata={e} />
-                                </SwiperSlide>
-                            );
-                        })}
-                    </Swiper> */}
+                    <Swiper data-slide="down" effect="cards" autoplay={{ delay: 5000 }} pagination={{ enabled: true, clickable: true }} speed={300} navigation={true} modules={[EffectCards, Navigation, Autoplay, Pagination]} slidesPerView="auto" className="mySwiper mx-auto w-1/2 aspect-[3/2]">
+                        {katasInfo
+                            .sort((a, b) => b.rank.id - a.rank.id)
+                            .map((e) => {
+                                return (
+                                    <SwiperSlide className="cursor-grab">
+                                        <KataCard solved={katas.data.find((el) => el.id == e.id)} kata={e} />
+                                    </SwiperSlide>
+                                );
+                            })}
+                    </Swiper>
                 </div>
             </div>
         </div>

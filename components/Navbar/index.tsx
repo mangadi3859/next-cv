@@ -10,7 +10,7 @@ export default function Navbar() {
                 </p>
 
                 <div className="NavItems flex justify-center gap-1">
-                    <NavItem href="#about">About</NavItem>
+                    <NavItem href="#hero">About</NavItem>
                     <NavItem href="/project">Project</NavItem>
                     <NavItem href="#resume">Resume</NavItem>
                     <NavItem href="#contact">Contact</NavItem>

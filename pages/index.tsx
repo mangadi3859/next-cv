@@ -18,6 +18,7 @@ import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import { GetServerSidePropsContext } from "next";
 import Resume from "@/components/Resume";
+import Contact from "@/components/Contact";
 
 export async function getServerSideProps(props: GetServerSidePropsContext) {
     let codewarUser = await getCodewarUser();
@@ -43,8 +44,11 @@ export default function Home({ codewars }: utils.IServerProps) {
                 <Navbar />
                 <Hero />
                 <main className={`${styles.main} my-10`}>
-                    <Section name="Resume" className="py-20">
+                    <Section name="Resume" id="resume" className="py-20">
                         <Resume user={codewars.user} katas={codewars.katas} katasInfo={codewars.katasInfo} />
+                    </Section>
+                    <Section name="Contact" id="contact" className="py-10">
+                        <Contact />
                     </Section>
                 </main>
                 <Footer />

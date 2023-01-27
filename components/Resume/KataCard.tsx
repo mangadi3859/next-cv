@@ -20,7 +20,7 @@ export default function KataCard({ kata, solved }: { kata: IKataInfo; solved?: I
                     Completed <span className="font-medium">{moment(solved?.completedAt).fromNow()}</span>
                 </p>
             </div>
-            <div className="tag_badge flex justify-start items-start gap-1 overflow-x-auto mt-2 overflow-y-hidden">
+            <div className="tag_badge flex justify-start items-start gap-1 mt-2 overflow-y-hidden">
                 <Badge title={kata.rank.name} className="filter capitalize contrast-75 brightness-[90%]" style={{ backgroundColor: kata.rank.color }} />
                 {kata.tags.map((e) => {
                     return <Badge title={e} className="capitalize bg-neutral-300" key={e} />;
