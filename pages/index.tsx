@@ -6,7 +6,6 @@ const poppins = Poppins({ weight: ["100", "200", "300", "400", "500", "600", "70
 import * as utils from "../lib/utils";
 import getCodewarUser from "../lib/getCodewarUser";
 import getSolvedKatas from "@/lib/getSolvedKatas";
-import getCodewaUser from "@/lib/getCodewarUser";
 
 //Components
 import Meta from "../components/Meta";
@@ -19,13 +18,6 @@ import Section from "@/components/Section";
 import { GetServerSidePropsContext } from "next";
 import Resume from "@/components/Resume";
 
-export interface IServerProps extends JSX.Element {
-    codewars: {
-        user: utils.UnPromise<ReturnType<typeof getCodewaUser>>;
-        katas: utils.UnPromise<ReturnType<typeof getSolvedKatas>>;
-    };
-}
-
 export async function getServerSideProps(props: GetServerSidePropsContext) {
     let codewarUser = await getCodewarUser();
     let codewarsKata = await getSolvedKatas();
@@ -33,7 +25,7 @@ export async function getServerSideProps(props: GetServerSidePropsContext) {
     return { props: { codewars: { user: codewarUser, katas: codewarsKata } } };
 }
 
-export default function Home({ codewars }: IServerProps) {
+export default function Home({ codewars }: utils.IServerProps) {
     animateSlide();
 
     // let codewars: IServerProps["codewars"] = props.codewars;
