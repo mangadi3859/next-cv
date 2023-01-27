@@ -13,6 +13,10 @@
     .button {
         @apply cursor-pointer transition-all duration-300 rounded-full px-4 py-1 tracking-[1px];
     }
+
+    .link {
+        @apply hover:text-primary-300 duration-100 transition-all hover:underline;
+    }
 }
 
 /* Normal CSS */
@@ -23,12 +27,29 @@
     box-sizing: border-box;
 }
 
-* {
-    line-height: normal;
-}
-
 body {
     scroll-behavior: smooth;
+}
+
+:is(.swiper-button-next, .swiper-button-prev) {
+    color: #af4b67;
+    margin-inline: -10rem;
+}
+
+.swiper-pagination {
+    transform: translateY(140%);
+}
+
+.swiper-pagination-bullet {
+    background-color: rgb(175 75 103 / 0.5);
+    overflow: hidden;
+    width: 0.6rem;
+    height: 0.6rem;
+    aspect-ratio: 1/1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(175 75 103);
 }
 
 [data-slide] {

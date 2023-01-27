@@ -1,16 +1,19 @@
 import Badge from "../Badge";
 import { IServerProps } from "../../lib/utils";
 import Skill from "./Skill";
-import { Splide } from "@splidejs/react-splide";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards, Autoplay, Navigation, Pagination } from "swiper";
+import KataCard from "./KataCard";
 
-export default function Resume({ katas, user }: IServerProps["codewars"] & { [k: string]: any }) {
+export default function Resume({ katas, user, katasInfo }: IServerProps["codewars"] & { [k: string]: any }) {
     return (
         <div className="codewar__card  px-5 py-3" data-slide="down">
             <div className="card__nav mb-4 text-xl font-semibold">Codewars Stats</div>
             <div className="card_tabs" data-slide="right">
                 <div className={`grid grid-cols-8 gap-6 items-center`}>
                     <div className="flex col-span-2 justify-center items-center flex-col rounded-md bg-white shadow-lg px-10 py-6">
-                        <img src="https://avatars.githubusercontent.com/u/65892564?s=400" alt="avatar" className="aspect-square rounded-full overflow-hidden p-2 w-32 p-1 bg-neutral-400" />
+                        {/* <img src="https://avatars.githubusercontent.com/u/65892564?s=400" alt="avatar" className="aspect-square rounded-full overflow-hidden p-2 w-32 p-1 bg-neutral-400" /> */}
+                        <img src="https://lh3.googleusercontent.com/a/AEdFTp70l2e-tTrwzX7QQhY9AxVzTiFUVc2M4B8OyDwREQ=s288-p-no" alt="avatar" className="aspect-square rounded-full overflow-hidden p-2 w-32 p-1 bg-neutral-400" />
                         <p className="mt-2 text-xl font-semibold">{user.name}</p>
                         <p className="text-xs text-gray-700">
                             {user.ranks.overall.name} - {user.honor} Honors
@@ -22,8 +25,31 @@ export default function Resume({ katas, user }: IServerProps["codewars"] & { [k:
                         })}
                     </div>
                 </div>
-                <div data-slide="up" className="codewar__solved-katas mt-4">
-                    <div className="card__nav mb-4 text-xl font-semibold">Solved Katas</div>
+                <div data-slide="up" className="codewar__solved-katas">
+                    <div className="card__nav my-4 text-xl font-semibold">Solved Katas</div>
+                    <>
+                        <Swiper effect="cards" autoplay={{ delay: 7000 }} pagination={{ enabled: true, clickable: true }} speed={300} navigation={true} modules={[EffectCards, Navigation, Autoplay, Pagination]} slidesPerView="auto" className="mySwiper mx-auto w-1/2 aspect-[3/2]">
+                            {katasInfo
+                                .sort((a, b) => b.rank.id - a.rank.id)
+                                .map((e) => {
+                                    return (
+                                        <SwiperSlide>
+                                            <KataCard solved={katas.data.find((el) => el.id == e.id)} kata={e} />
+                                        </SwiperSlide>
+                                    );
+                                })}
+                        </Swiper>
+                    </>
+
+                    {/* <Swiper className="items-center aspect-[3/2] w-[30rem] mx-auto overflow-visible" centeredSlides={true} autoplay={true} autoHeight={true} spaceBetween={100} slidesPerView="auto" speed={400} effect="cards" modules={[EffectCards, Autoplay, Controller]} cardsEffect={{}}>
+                        {katasInfo.slice(0, 3).map((e) => {
+                            return (
+                                <SwiperSlide>
+                                    <KataCard kata={e} />
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper> */}
                 </div>
             </div>
         </div>

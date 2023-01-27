@@ -38,7 +38,8 @@ export default function Hero() {
 
             <div ref={cardRef} id="about" className="hero__card flex w-max aspect-[20/9] absolute bottom-[25%] h-2/3 left-1/2 translate-x-[-50%] rounded-md overflow-hidden shadow-md">
                 <div data-slide="right" className="card__avatar p-6 flex flex-col aspect-[3/5] bg-primary-800 items-center">
-                    <img src="/assets/avatar.jpg" alt="avatar" className="rounded-full aspect-square mb-6" />
+                    {/* <img src="/assets/avatar.jpg" alt="avatar" className="rounded-full aspect-square mb-6" /> */}
+                    <img src="https://lh3.googleusercontent.com/a/AEdFTp70l2e-tTrwzX7QQhY9AxVzTiFUVc2M4B8OyDwREQ=s288-p-no" alt="avatar" className="rounded-full aspect-square mb-6" />
                     <p className="text-xl font-bold">ISLA</p>
                     <p className="text-lg font-medium">Komang Adi Wirawan</p>
                     <div className="bg-primary-400 w-8 h-[.175rem] my-auto"></div>

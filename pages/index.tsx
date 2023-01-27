@@ -6,6 +6,7 @@ const poppins = Poppins({ weight: ["100", "200", "300", "400", "500", "600", "70
 import * as utils from "../lib/utils";
 import getCodewarUser from "../lib/getCodewarUser";
 import getSolvedKatas from "@/lib/getSolvedKatas";
+import getKataInfo from "@/lib/getKata";
 
 //Components
 import Meta from "../components/Meta";
@@ -21,8 +22,9 @@ import Resume from "@/components/Resume";
 export async function getServerSideProps(props: GetServerSidePropsContext) {
     let codewarUser = await getCodewarUser();
     let codewarsKata = await getSolvedKatas();
+    let codewarsSolvedKatasInfo = await Promise.all(codewarsKata.data.map((e) => getKataInfo(e.id)));
 
-    return { props: { codewars: { user: codewarUser, katas: codewarsKata } } };
+    return { props: { codewars: { user: codewarUser, katas: codewarsKata, katasInfo: codewarsSolvedKatasInfo } } };
 }
 
 export default function Home({ codewars }: utils.IServerProps) {
@@ -41,8 +43,8 @@ export default function Home({ codewars }: utils.IServerProps) {
                 <Navbar />
                 <Hero />
                 <main className={`${styles.main} my-10`}>
-                    <Section name="Resume">
-                        <Resume user={codewars.user} katas={codewars.katas} />
+                    <Section name="Resume" className="py-20">
+                        <Resume user={codewars.user} katas={codewars.katas} katasInfo={codewars.katasInfo} />
                     </Section>
                 </main>
                 <Footer />

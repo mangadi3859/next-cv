@@ -1,6 +1,6 @@
 import axios from "axios";
 
-interface IKataInfo {
+export interface IKataInfo {
     id: string;
     name: string;
     slug: string;
@@ -30,6 +30,6 @@ interface IKataInfo {
     approvedAt: string;
 }
 
-export default async function getDataInfo(id: string): Promise<IKataInfo> {
-    return (await axios.get(`https://www.codewars.com/api/v1/code-challenges/${id}`)).data;
+export default async function getKataInfo(id: string): Promise<IKataInfo> {
+    return (await axios.get(`https://www.codewars.com/api/v1/code-challenges/${id}`, { timeout: 10000 })).data;
 }

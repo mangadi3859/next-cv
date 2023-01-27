@@ -1,3 +1,7 @@
-export default function Badge({ title, className }: any) {
-    return <span className={`${className} px-4 rounded-md py-1 text-sm border text-black`}>{title}</span>;
+export default function Badge({ title, className, style }: any) {
+    return (
+        <span style={style} className={`inline-block px-4 h-[2em] grow-0 rounded-md py-1 font-medium text-[.65rem] text-black ${className}`}>
+            <span>{title}</span>
+        </span>
+    );
 }
