@@ -36,7 +36,7 @@ export default function Hero() {
                 <div className="w-full h-full bg-primary-200 bg-opacity-70 absolute"></div>
             </div>
 
-            <div ref={cardRef} id="about" className="phone:overflow-y-visible phone:no-slide phone:flex-col phone:aspect-auto phone:top-0 phone:bottom-auto phone:w-auto hero__card flex aspect-[20/9] absolute bottom-[25%] max-w-[60rem] w-[95%] left-1/2 translate-x-[-50%] rounded-md overflow-hidden shadow-md">
+            <div ref={cardRef} id="about" className="phone:overflow-y-visible phone:flex-col phone:aspect-auto phone:top-0 phone:bottom-auto phone:w-auto hero__card flex aspect-[20/9] absolute bottom-[25%] max-w-[60rem] w-[95%] left-1/2 translate-x-[-50%] rounded-md overflow-hidden shadow-md">
                 <div data-slide="right" className="card__avatar p-6 flex flex-col aspect-[3/5] bg-primary-800 items-center">
                     {/* <img src="/assets/avatar.jpg" alt="avatar" className="rounded-full aspect-square mb-6" /> */}
                     <img src="/assets/avatar-2.jpg" alt="avatar" className="phone:w-1/2 rounded-full aspect-square mb-6" />
@@ -53,7 +53,7 @@ export default function Hero() {
                         </a>
                     </div>
                 </div>
-                <div data-slide="left" className="card__content phone:no-slide min-w-[80%] text-white bg-black bg-opacity-80 px-10 py-6 flex-grow h-auto">
+                <div data-slide="left" className="card__content min-w-[80%] text-white bg-black bg-opacity-80 px-10 py-6 flex-grow h-auto">
                     <h1 className="text-6xl phone-lg:text-2xl font-bold mb-3 phone-lg:mb-1 border-b-8 phone-lg:border-b-2 inline-block border-primary-400">Hello</h1>
                     <h2 className="text-2xl phone-lg:text-lg font-medium">Here's who i am & what i do.</h2>
                     <div className="card__btn mt-6 phone-lg:mt-2 flex gap-4 justify-start items-center">
