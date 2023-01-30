@@ -40,7 +40,7 @@ export default function Home({ codewars }: utils.IServerProps) {
                 <title>CV - Komang Adi Wirawan</title>
             </Head>
 
-            <Body className={`${poppins.className} bg-neutral-50`}>
+            <Body className={`${poppins.className} overflow-x-hidden bg-neutral-50`}>
                 <Navbar />
                 <Hero />
                 <main className={`${styles.main} my-10`}>

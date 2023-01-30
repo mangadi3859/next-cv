@@ -7,13 +7,13 @@ import KataCard from "./KataCard";
 
 export default function Resume({ katas, user, katasInfo }: IServerProps["codewars"] & { [k: string]: any }) {
     return (
-        <div className="codewar__card  px-5 py-3" data-slide="down">
+        <div className="codewar__card px-5 py-3" data-slide="down">
             <div className="card__nav mb-4 text-xl font-semibold">Codewars Stats</div>
             <div className="card_tabs" data-slide="right">
                 <div className={`grid grid-cols-8 gap-6 items-center`}>
                     <div className="flex col-span-2 justify-center items-center flex-col rounded-md bg-white shadow-lg px-10 py-6">
                         {/* <img src="https://avatars.githubusercontent.com/u/65892564?s=400" alt="avatar" className="aspect-square rounded-full overflow-hidden p-2 w-32 p-1 bg-neutral-400" /> */}
-                        <img src="https://lh3.googleusercontent.com/a/AEdFTp70l2e-tTrwzX7QQhY9AxVzTiFUVc2M4B8OyDwREQ=s288-p-no" alt="avatar" className="aspect-square rounded-full overflow-hidden p-2 w-32 p-1 bg-neutral-400" />
+                        <img src="/assets/avatar-2.jpg" alt="avatar" className="aspect-square rounded-full overflow-hidden w-32 p-1 bg-neutral-400" />
                         <p className="mt-2 text-xl font-semibold">{user.name}</p>
                         <p className="text-xs text-gray-700">
                             {user.ranks.overall.name} - {user.honor} Honors
@@ -32,7 +32,7 @@ export default function Resume({ katas, user, katasInfo }: IServerProps["codewar
                             .sort((a, b) => b.rank.id - a.rank.id)
                             .map((e) => {
                                 return (
-                                    <SwiperSlide className="cursor-grab">
+                                    <SwiperSlide className="cursor-grab" key={e.id}>
                                         <KataCard solved={katas.data.find((el) => el.id == e.id)} kata={e} />
                                     </SwiperSlide>
                                 );

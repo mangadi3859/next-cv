@@ -17,6 +17,10 @@
     .link {
         @apply hover:text-primary-300 duration-100 transition-all hover:underline;
     }
+
+    .no-slide {
+        @apply translate-x-0 translate-y-0;
+    }
 }
 
 /* Normal CSS */
@@ -52,7 +56,7 @@ html {
     background-color: rgb(175 75 103);
 }
 
-[data-slide] {
+[data-slide]:not(.no-slide) {
     opacity: 0;
     transition: all 0.3s ease, transform 1s ease, opacity 1s ease;
 }
@@ -70,7 +74,7 @@ html {
     transform: translateY(-4rem);
 }
 
-[data-slide].i\:open {
+[data-slide]:not(.no-slide).i\:open {
     opacity: 1;
     transform: translate(0, 0);
 }

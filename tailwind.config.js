@@ -1,9 +1,20 @@
+const tailwind = require("tailwindcss");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     mode: "jit",
     content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
     theme: {
         extend: {
+            screens: {
+                phone: {
+                    max: "799px",
+                },
+                "phone-lg": {
+                    max: "900px",
+                },
+            },
+
             colors: {
                 primary: {
                     100: "#15536a",
@@ -18,6 +29,7 @@ module.exports = {
                     950: "#eaf6fb",
                     DEFAULT: "#09aaaa",
                 },
+
                 secondary: {
                     200: "#AF4B67",
                     DEFAULT: "#C06C84",
