@@ -19,9 +19,9 @@ export default function Resume({ katas, user, katasInfo }: IServerProps["codewar
                             {user.ranks.overall.name} - {user.honor} Honors
                         </p>
                     </div>
-                    <div data-slide="left" className="card__tabs relative isolate flex col-span-6 phone:col-span-1 justify-start phone:justify-between phone:items-center phone:content-center gap-4 items-start flex-grow flex-wrap bg-white shadow-lg px-10 py-6 h-full overflow-hidden">
-                        <div data-animate className="circle transition-all duration-500 scale-0 delay-300 [&.i-open]:scale-100 rounded-full opacity-30 translate-x-1/2 -translate-y-1/2 aspect-square w-3/4 bg-secondary-500 phone:bg-secondary-500 phone:opacity-20 absolute top-0 right-0 z-[-1]"></div>
-                        <div data-animate className="circle transition-all duration-500 scale-0 delay-300 [&.i-open]:scale-100 rounded-full opacity-30 -translate-x-1/2 translate-y-[5rem] aspect-square w-1/3 bg-orange-300 phone:bg-orange-500 phone:opacity-20 absolute bottom-0 left-0 z-[-1]"></div>
+                    <div data-slide="left" data-animate className="card__tabs relative isolate flex col-span-6 group phone:col-span-1 justify-start phone:justify-between phone:items-center phone:content-center gap-4 items-start flex-grow flex-wrap bg-white shadow-lg px-10 py-6 h-full overflow-hidden">
+                        <div className="circle transition-all duration-500 scale-0 delay-300 group-[&.i-open]:scale-100 rounded-full opacity-30 translate-x-1/2 -translate-y-1/2 aspect-square w-3/4 bg-secondary-700 phone:bg-secondary-500 phone:opacity-20 absolute top-0 right-0 z-[-1]"></div>
+                        <div className="circle transition-all duration-500 scale-0 delay-300 group-[&.i-open]:scale-100 rounded-full opacity-30 -translate-x-1/2 translate-y-[5rem] phone:translate-y-[2rem] aspect-square w-1/3 bg-orange-300 phone:bg-orange-500 phone:opacity-20 absolute bottom-0 left-0 z-[-1]"></div>
                         {Object.keys(user.ranks.languages).map((e) => {
                             return <Skill key={e} name={e} rank={user.ranks.languages[e]} />;
                         })}

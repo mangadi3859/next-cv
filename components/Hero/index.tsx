@@ -38,7 +38,7 @@ export default function Hero() {
                 <div className="w-full h-full bg-primary-200 bg-opacity-70 absolute"></div>
             </div>
 
-            <div ref={cardRef} className="phone:hidden phone:overflow-y-visible phone:flex-col phone:aspect-[unset] phone:top-0 phone:bottom-[none] hero__card flex aspect-[20/9] absolute bottom-[25%] max-w-[60rem] w-[90%] left-1/2 translate-x-[-50%] rounded-md overflow-hidden shadow-md">
+            <div ref={cardRef} className="phone:hidden phone:overflow-y-visible phone:flex-col phone:top-0 phone:bottom-[none] hero__card flex aspect-[20/9] absolute bottom-[25%] max-w-[60rem] w-[90%] left-1/2 translate-x-[-50%] rounded-md overflow-hidden shadow-md">
                 <AboutCard data-slide="right" />
                 <ContentCard data-slide="left" />
             </div>

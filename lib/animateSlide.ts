@@ -2,25 +2,21 @@ import { useEffect } from "react";
 import isClientReady from "./isClientReady";
 
 export default function animateSlide() {
+    function handler(entries: IntersectionObserverEntry[]) {
+        entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            e.target.classList.add("i:open");
+
+            if ("animate" in (<any>e.target).dataset) e.target.classList.add("i-open");
+        });
+    }
+
     if (isClientReady()) {
         useEffect(() => {
             let observer: IntersectionObserver;
             let slides = document.querySelectorAll("[data-slide], [data-animate]");
 
-            observer = new IntersectionObserver(
-                (entries) =>
-                    entries.forEach((e) => {
-                        // if (!e.isIntersecting) return e.target.classList.remove("i:open");
-                        if (!e.isIntersecting) return;
-                        e.target.classList.add("i:open");
-
-                        if ("animate" in (<any>e.target).dataset) e.target.classList.add("i-open");
-                        // observer.unobserve(e.target);
-                    }),
-                {
-                    threshold: 0.2,
-                },
-            );
+            observer = new IntersectionObserver(handler);
 
             slides?.forEach((e) => observer.observe(e));
 
