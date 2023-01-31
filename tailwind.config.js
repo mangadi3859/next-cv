@@ -1,4 +1,4 @@
-const tailwind = require("tailwindcss");
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,11 +7,11 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                phone: {
-                    max: "799px",
-                },
                 "phone-lg": {
                     max: "900px",
+                },
+                phone: {
+                    max: "768px",
                 },
             },
 
@@ -33,6 +33,8 @@ module.exports = {
                 secondary: {
                     200: "#AF4B67",
                     DEFAULT: "#C06C84",
+                    500: "#d194a5",
+                    700: "#f0dbe1",
                 },
             },
         },

@@ -11,7 +11,7 @@ export default function Meta() {
             <meta property="og:image" content="images/logo.png" />
             <meta property="og:title" content="CV - Komang Adi Wirawan" />
             <meta property="og:description" content="CV Komang Adi Wirawan" />
-            <link rel="shortcut icon" href="/assets/favico.png" type="image/x-icon" />
+            <link rel="shortcut icon" href="/assets/avatar-2.jpg" type="image/x-icon" />
         </React.Fragment>
     );
 }

@@ -21,6 +21,18 @@
     .no-slide {
         @apply translate-x-0 translate-y-0;
     }
+
+    .swiper-pagination-bullet-active {
+        @apply bg-secondary-200;
+    }
+
+    .swiper-pagination-bullet {
+        @apply bg-secondary-200 bg-opacity-50 w-[.6rem] h-auto aspect-square phone:w-[.4rem];
+    }
+
+    .swiper-pagination {
+        @apply translate-y-[140%];
+    }
 }
 
 /* Normal CSS */
@@ -40,12 +52,8 @@ html {
     margin-inline: -10rem;
 }
 
-.swiper-pagination {
-    transform: translateY(140%);
-}
-
-.swiper-pagination-bullet {
-    background-color: rgb(175 75 103 / 0.5);
+/* .swiper-pagination-bullet {
+    background-color: rgb(175 75 103 / 0.5); 
     overflow: hidden;
     width: 0.6rem;
     height: 0.6rem;
@@ -54,7 +62,7 @@ html {
 
 .swiper-pagination-bullet-active {
     background-color: rgb(175 75 103);
-}
+} */
 
 [data-slide]:not(.no-slide) {
     opacity: 0;

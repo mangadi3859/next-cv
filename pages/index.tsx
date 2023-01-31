@@ -19,6 +19,7 @@ import Section from "@/components/Section";
 import { GetServerSidePropsContext } from "next";
 import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
+import ToTop from "../components/toTop";
 
 export async function getServerSideProps(props: GetServerSidePropsContext) {
     let codewarUser = await getCodewarUser();
@@ -41,13 +42,14 @@ export default function Home({ codewars }: utils.IServerProps) {
             </Head>
 
             <Body className={`${poppins.className} overflow-x-hidden bg-neutral-50`}>
+                <ToTop />
                 <Navbar />
                 <Hero />
                 <main className={`${styles.main} my-10`}>
                     <Section name="Resume" id="resume" className="py-20">
                         <Resume user={codewars.user} katas={codewars.katas} katasInfo={codewars.katasInfo} />
                     </Section>
-                    <Section name="Contact" id="contact" className="py-10">
+                    <Section name="Contact" id="contact" className="py-10 mt-10">
                         <Contact />
                     </Section>
                 </main>

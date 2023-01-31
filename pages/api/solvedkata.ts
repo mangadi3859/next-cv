@@ -1,15 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import getKata, { IKataInfo } from "../../lib/getKata";
+import getSolvedKatas from "../../lib/getSolvedKatas";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    let id = req.query.page || 0;
+    let page = parseInt(<string>req.query.page || "0");
 
     try {
-        let kata = await getKata(<string>id);
+        let kata = await getSolvedKatas(page);
         if (!kata) return res.status(404).json({ message: "Not Found" });
 
         res.status(200).json(kata);
-    } catch (e) {
+    } catch (e: any) {
+        console.log(e.message);
         res.status(404).json({ message: "Not Found" });
     }
 }
