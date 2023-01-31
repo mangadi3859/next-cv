@@ -28,7 +28,7 @@ export default function ToTop() {
     }
 
     return (
-        <button ref={btnRef} className="transition shadow-md duration-300 fixed right-0 bottom-0 aspect-square bg-primary-400 hover:bg-primary-200 grid p-3 rounded-full overflow-hidden place-items-center m-4 z-[1000]" onClick={handleClick}>
+        <button ref={btnRef} className="transition shadow-md duration-700 fixed right-0 bottom-0 aspect-square bg-primary-400 hover:bg-primary-200 grid p-3 rounded-full overflow-hidden place-items-center m-4 z-[1000]" onClick={handleClick}>
             <FaArrowUp className="text-3xl phone:text-base text-neutral-50" />
         </button>
     );
