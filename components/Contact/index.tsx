@@ -43,7 +43,7 @@ export default function Contact() {
     }, []);
 
     function handleSubmit(e: any) {
-        let endpoint = "https://formsubmit.co/" + encodeURIComponent("mangadirpl+cv-next@gmail.com");
+        let endpoint = "https://formsubmit.co/" + encodeURIComponent("2de97dad8e39025a35ada14e2703f376");
         btnRef.current.disabled = true;
 
         console.log(name, email);
