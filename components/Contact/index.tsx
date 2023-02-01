@@ -28,18 +28,19 @@ export default function Contact() {
         setMessage((e.target as JSX.IntrinsicElements["textarea"]).value as string);
     }
 
-    if (isClientReady())
-        useEffect(() => {
-            nameRef.current?.addEventListener("change", handleName);
-            emailRef.current?.addEventListener("change", handleEmail);
-            messageRef.current?.addEventListener("change", handleMessage);
+    useEffect(() => {
+        if (!isClientReady()) return;
 
-            return () => {
-                nameRef.current?.removeEventListener("change", handleName);
-                emailRef.current?.removeEventListener("change", handleEmail);
-                messageRef.current?.removeEventListener("change", handleMessage);
-            };
-        }, []);
+        nameRef.current?.addEventListener("change", handleName);
+        emailRef.current?.addEventListener("change", handleEmail);
+        messageRef.current?.addEventListener("change", handleMessage);
+
+        return () => {
+            nameRef.current?.removeEventListener("change", handleName);
+            emailRef.current?.removeEventListener("change", handleEmail);
+            messageRef.current?.removeEventListener("change", handleMessage);
+        };
+    }, []);
 
     function handleSubmit(e: any) {
         let endpoint = "https://formsubmit.co/" + encodeURIComponent("mangadirpl+cv-next@gmail.com");

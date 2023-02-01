@@ -11,15 +11,14 @@ export default function Hero() {
     let imgRef = useRef<any>();
     let cardRef = useRef<any>();
 
-    if (isClientReady()) {
-        useEffect(() => {
-            setImgY(window.scrollY);
-            handleScroll();
-            window.addEventListener("scroll", handleScroll);
+    useEffect(() => {
+        if (!isClientReady()) return;
+        setImgY(window.scrollY);
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
 
-            return () => window.removeEventListener("scroll", handleScroll);
-        }, []);
-    }
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     function handleScroll(e?: Event) {
         setImgY(window.scrollY * 0.125);

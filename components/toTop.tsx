@@ -5,13 +5,13 @@ import isClientReady from "@/lib/isClientReady";
 export default function ToTop() {
     let btnRef = useRef<any>();
 
-    if (isClientReady())
-        useEffect(() => {
-            handleScroll();
-            document.addEventListener("scroll", handleScroll);
+    useEffect(() => {
+        if (!isClientReady()) return;
+        handleScroll();
+        document.addEventListener("scroll", handleScroll);
 
-            return () => document.removeEventListener("scroll", handleScroll);
-        }, []);
+        return () => document.removeEventListener("scroll", handleScroll);
+    }, []);
 
     function handleClick() {
         window.scrollTo({ top: 0 });

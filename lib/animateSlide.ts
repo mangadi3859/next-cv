@@ -11,16 +11,15 @@ export default function animateSlide() {
         });
     }
 
-    if (isClientReady()) {
-        useEffect(() => {
-            let observer: IntersectionObserver;
-            let slides = document.querySelectorAll("[data-slide], [data-animate]");
+    useEffect(() => {
+        if (!isClientReady()) return;
+        let observer: IntersectionObserver;
+        let slides = document.querySelectorAll("[data-slide], [data-animate]");
 
-            observer = new IntersectionObserver(handler);
+        observer = new IntersectionObserver(handler);
 
-            slides?.forEach((e) => observer.observe(e));
+        slides?.forEach((e) => observer.observe(e));
 
-            return () => observer?.disconnect();
-        });
-    }
+        return () => observer?.disconnect();
+    });
 }
