@@ -35,7 +35,7 @@ export default function Education() {
                 <Item year="2018" title="SMP Nasional Denpasar">
                     Located in Jl. Tukad Yeh Aya N0. 15 A, Panjer, Kec. Denpasar Selatan, Kota Denpasar. i spent another 3 years learning here about &quot;Neccessary&quot; stuff.
                 </Item>
-                <Item year="2021" title="SMP Nasional Denpasar">
+                <Item year="2021" title="SMK TI Bali Global Denpasar">
                     This is the school when i actually like studying.
                 </Item>
             </div>
