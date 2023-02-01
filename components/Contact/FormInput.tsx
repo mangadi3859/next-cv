@@ -9,4 +9,6 @@ const FormInput = forwardRef((props: JSX.IntrinsicElements["input"] & { divClass
     );
 });
 
+FormInput.displayName = "FormInput";
+
 export default FormInput;
