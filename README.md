@@ -1,9 +1,9 @@
 
 <div align="center">
-#ISLA CV
+<h1>ISLA CV</h1>
 </div>
 
 
 This is a project i create with NextJs to display my CV on the web.
 
-[Click This](https://isla-cv.vercel.app)
+[**Click This**](https://isla-cv.vercel.app)
