@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { Poppins } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import React from "react";
-const poppins = Poppins({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
 import * as utils from "../lib/utils";
 import getCodewarUser from "../lib/getCodewarUser";
 import getSolvedKatas from "@/lib/getSolvedKatas";
@@ -41,7 +39,7 @@ export default function Home({ codewars }: utils.IServerProps) {
                 <title>CV - Komang Adi Wirawan</title>
             </Head>
 
-            <Body className={`${poppins.className} overflow-x-hidden bg-neutral-50`}>
+            <Body className={`overflow-x-hidden bg-neutral-50`}>
                 <ToTop />
                 <Navbar />
                 <Hero />

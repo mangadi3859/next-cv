@@ -3,7 +3,7 @@ import Hamburger from "./hamburger";
 import { FaUserGraduate } from "react-icons/fa";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ items }: { items?: { href: string; name: string }[] }) {
     let [isNavOpen, setIsNavOpen] = useState(false);
 
     function handleHamburger(e: any) {
@@ -17,11 +17,21 @@ export default function Navbar() {
                     <FaUserGraduate className="inline text-primary" /> ISLA
                 </p>
 
-                <div className={`nav__items justify-center gap-1 flex phone:absolute phone:bottom-0 phone:items-center phone:left-0 phone:right-0 phone:flex-col phone:bg-white transition-all phone:z-[-1] phone:px-4 phone:pb-6 ${isNavOpen ? "translate-y-full phone:opacity-100 " : "phone:opacity-0"}`}>
-                    <NavItem href="#hero">About</NavItem>
-                    <NavItem href="/project">Project</NavItem>
-                    <NavItem href="#resume">Resume</NavItem>
-                    <NavItem href="#contact">Contact</NavItem>
+                <div className={`nav__items justify-center gap-1 flex phone:shadow-md phone:absolute phone:bottom-0 phone:items-center phone:left-0 phone:right-0 phone:flex-col phone:bg-white transition-all phone:z-[-1] phone:px-4 phone:pb-6 ${isNavOpen ? "translate-y-full phone:opacity-100 " : "phone:opacity-0"}`}>
+                    {!items?.length ? (
+                        <>
+                            <NavItem href="#hero">About</NavItem>
+                            <NavItem href="/project">Project</NavItem>
+                            <NavItem href="#resume">Resume</NavItem>
+                            <NavItem href="#contact">Contact</NavItem>
+                        </>
+                    ) : (
+                        items?.map((e) => (
+                            <NavItem key={e.href} href={e.href}>
+                                {e.name}
+                            </NavItem>
+                        ))
+                    )}
                 </div>
 
                 <Hamburger state={isNavOpen} onClick={handleHamburger} className="hidden group phone:flex" />

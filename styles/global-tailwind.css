@@ -33,6 +33,10 @@
     .swiper-pagination {
         @apply translate-y-[140%];
     }
+
+    .circle-decoration {
+        @apply aspect-square rounded-full z-[-9999] transition-all duration-500;
+    }
 }
 
 /* Normal CSS */
