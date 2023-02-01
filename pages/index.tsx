@@ -11,7 +11,7 @@ import Meta from "../components/Meta";
 import Hero from "../components/Hero";
 import Body from "../components/Body";
 import Navbar from "../components/Navbar";
-import animateSlide from "../lib/animateSlide";
+import useAnimateSlide from "../lib/useAnimateSlide";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import { GetServerSidePropsContext } from "next";
@@ -28,7 +28,7 @@ export async function getServerSideProps(props: GetServerSidePropsContext) {
 }
 
 export default function Home({ codewars }: utils.IServerProps) {
-    animateSlide();
+    useAnimateSlide();
 
     // let codewars: IServerProps["codewars"] = props.codewars;
 

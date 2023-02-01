@@ -91,7 +91,7 @@ export default function Contact() {
         <div className="form relative isolate">
             <CircleOne />
 
-            <h2 className="text-2xl flex flex-col justify-start items-center font-normal text-primary-300 text-center">Wan't to know more about me?</h2>
+            <h2 className="text-2xl flex flex-col justify-start items-center font-normal text-primary-300 text-center">Want to know more about me?</h2>
             <form onSubmit={handleSubmit} className="flex mt-4 flex-col items-center justify-start max-w-[40rem] mx-auto gap-4 p-2">
                 <div className="form__group flex phone:flex-col gap-4 w-full">
                     <FormInput required ref={nameRef} type="text" name="subject" placeholder="Your Name" defaultValue={name} />

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import isClientReady from "./isClientReady";
 
-export default function animateSlide() {
+export default function useAnimateSlide() {
     function handler(entries: IntersectionObserverEntry[]) {
         entries.forEach((e) => {
             if (!e.isIntersecting) return;

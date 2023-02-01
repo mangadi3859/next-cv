@@ -27,7 +27,7 @@ export default function KataCard({ kata, solved }: { kata: IKataInfo; solved?: I
                 })}
             </div>
             <div className="overflow-hidden opacity-75 description mt-4 phone:mt-2 text-white font-light phone-lg:text-sm phone:text-xs max-w-full phone:h-11">{kata.description.length > 230 ? kata.description.slice(0, 230) + "..." : kata.description.length}</div>
-            <ButtonAnchor target="_blank" title="See the kata" href={kata.url} className="text-black mr-auto mt-auto font-medium bg-white hover:bg-neutral-200 hover:scale-105 flex items-center phone-lg:text-xs gap-2">
+            <ButtonAnchor target="_blank" rel="noreferrer" title="See the kata" href={kata.url} className="text-black mr-auto mt-auto font-medium bg-white hover:bg-neutral-200 hover:scale-105 flex items-center phone-lg:text-xs gap-2">
                 Read More <FaArrowRight />
             </ButtonAnchor>
         </div>

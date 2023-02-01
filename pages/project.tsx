@@ -1,7 +1,7 @@
 import React from "react";
 import * as utils from "../lib/utils";
 import styles from "../styles/Home.module.css";
-import animateSlide from "@/lib/animateSlide";
+import useAnimateSlide from "@/lib/useAnimateSlide";
 
 //Components
 import Head from "next/head";
@@ -21,7 +21,7 @@ import Projects from "@/components/Projects";
 // }
 
 export default function ProjectPage() {
-    animateSlide();
+    useAnimateSlide();
 
     return (
         <React.Fragment>
