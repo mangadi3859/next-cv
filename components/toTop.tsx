@@ -18,7 +18,7 @@ export default function ToTop() {
     }
 
     function handleScroll() {
-        if (window.scrollY >= window.innerHeight * 0.8) {
+        if (window.scrollY >= window.innerHeight * 0.5) {
             btnRef.current.classList.remove("translate-y-[15rem]");
             return btnRef.current.classList.add("translate-y-0");
         }

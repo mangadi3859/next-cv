@@ -45,15 +45,18 @@ export default function Contact() {
         let endpoint = "https://formsubmit.co/" + encodeURIComponent("mangadirpl+cv-next@gmail.com");
         btnRef.current.disabled = true;
 
+        console.log(name, email);
+
         fetch(endpoint, {
             method: "POST",
-            body: JSON.stringify({
-                name,
-                email,
-                message,
-            }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, message }),
         })
             .then((e) => {
+                console.log(e);
+
                 resultMsgRef.current.innerText = "Success";
                 resultMsgRef.current.classList.add("text-green-700");
                 resultMsgRef.current.classList.add("border-green-600");

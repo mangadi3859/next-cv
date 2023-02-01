@@ -1,9 +1,11 @@
 import Item from "./Item";
+import { CircleTwo } from "../Circle";
 
 export default function Education() {
     return (
         <div data-animate className="education__list flex phone:flex-col gap-10 relative group/animate isolate justify-between items-start mt-[5rem]">
             <div className="circle-decoration absolute right-0 top-4 translate-x-1/2 w-1/2 phone:w-full scale-0 group-[&.i-open]/animate:scale-100 bg-orange-300 opacity-20"></div>
+            <CircleTwo className="transition-all duration-500 delay-500 scale-0 group-[&.i-open]/animate:scale-100" />
 
             <div className="flex-col items-start w-1/2 phone:w-full">
                 <Item year="General" circleClass="text-xs phone:text-[.65rem]" title="General Experience">

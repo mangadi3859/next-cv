@@ -30,12 +30,20 @@
         @apply bg-secondary-200 bg-opacity-50 w-[.6rem] h-auto aspect-square phone:w-[.4rem];
     }
 
-    .swiper-pagination {
+    .codewar__solved-katas .swiper-pagination {
         @apply translate-y-[140%];
     }
 
     .circle-decoration {
-        @apply aspect-square rounded-full z-[-9999] transition-all duration-500;
+        @apply aspect-square rounded-full z-[-9999] delay-500 transition-all duration-500;
+    }
+
+    .project__slide :is(.swiper-button-next, .swiper-button-prev) {
+        @apply phone:hidden;
+    }
+
+    .project__slide .swiper-pagination-bullet {
+        @apply w-6 phone:w-2;
     }
 }
 
@@ -53,6 +61,9 @@ html {
 
 :is(.swiper-button-next, .swiper-button-prev) {
     color: #af4b67;
+}
+
+.codewar__solved-katas :is(.swiper-button-next, .swiper-button-prev) {
     margin-inline: -10rem;
 }
 

@@ -9,6 +9,11 @@ export default function __dummyTailwind() {
             <div className="swiper-pagination-bullet"></div>
             <div className="swiper-pagination-bullet-active"></div>
             <div className="swiper-pagination"></div>
+            <div className="swiper-pagination-bullets-dynamic"></div>
+            <div className="project__slide">
+                <div className="swiper-pagination-bullets-dynamic"></div>
+            </div>
+            <div className="swiper"></div>
         </>
     );
 }

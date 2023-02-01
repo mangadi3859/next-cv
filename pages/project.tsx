@@ -1,7 +1,6 @@
 import React from "react";
 import * as utils from "../lib/utils";
 import styles from "../styles/Home.module.css";
-import { GetServerSidePropsContext } from "next";
 import animateSlide from "@/lib/animateSlide";
 
 //Components
@@ -13,6 +12,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import Education from "@/components/Education";
+import Projects from "@/components/Projects";
 
 // export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 //     return {
@@ -35,12 +35,15 @@ export default function ProjectPage() {
                 <Navbar
                     items={[
                         { href: "/", name: "About" },
-                        { href: "#experience", name: "Experience" },
                         { href: "#project", name: "Project" },
+                        { href: "#experience", name: "Experience" },
                         { href: "https://github.com/mangadi3859?tab=repositories", name: "Repository" },
                     ]}
                 />
                 <main className={`${styles.main} my-10`}>
+                    <Section name="Projects" id="project" className="py-20">
+                        <Projects />
+                    </Section>
                     <Section name="Experience" id="experience" className="py-20">
                         <Education />
                     </Section>
