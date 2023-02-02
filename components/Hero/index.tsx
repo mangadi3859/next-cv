@@ -10,6 +10,7 @@ export default function Hero() {
     let [imgY, setImgY] = useState<number>(0);
     let imgRef = useRef<any>();
     let cardRef = useRef<any>();
+    let cardPhoneRef = useRef<any>();
 
     useEffect(() => {
         if (!isClientReady()) return;
@@ -42,7 +43,7 @@ export default function Hero() {
                 <ContentCard data-slide="left" />
             </div>
 
-            <Swiper spaceBetween={50} autoplay={{ delay: 8000 }} centeredSlides={true} modules={[Navigation, Autoplay]} navigation={{ enabled: true }} className="mt-5 phone:block hero__card hidden max-w-[60rem] w-[90%] rounded-md overflow-hidden hover:cursor-grab">
+            <Swiper ref={cardPhoneRef} spaceBetween={50} autoplay={{ delay: 8000 }} centeredSlides={true} modules={[Navigation, Autoplay]} navigation={{ enabled: true }} className="mt-5 phone:block hero__card hidden max-w-[60rem] w-[90%] rounded-md overflow-hidden hover:cursor-grab">
                 <SwiperSlide className="h-full my-auto">
                     <AboutCard className="rounded-md shadow-md " />
                 </SwiperSlide>

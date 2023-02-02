@@ -29,7 +29,7 @@ export default function Resume({ katas, user, katasInfo }: IServerProps["codewar
                 </div>
                 <div data-slide="up" className="codewar__solved-katas mt-20 relative isolate">
                     <div className="card__nav my-4 text-xl font-semibold phone:text-lg phone:text-center">Solved Katas</div>
-                    <Swiper data-slide="down" effect="cards" autoplay={{ delay: 5000 }} pagination={{ enabled: true, clickable: true }} speed={300} navigation={true} modules={[EffectCards, Navigation, Autoplay, Pagination]} slidesPerView="auto" className="mx-auto w-1/2 phone:mb-12 phone:w-full phone:px-4 aspect-[3/2]">
+                    <Swiper data-slide="down" spaceBetween={50} autoplay={{ delay: 5000 }} pagination={{ enabled: true, clickable: true }} speed={300} navigation={true} modules={[EffectCards, Navigation, Autoplay, Pagination]} slidesPerView="auto" className="mx-auto w-1/2 phone:mb-12 phone:w-full overflow-visible phone:px-4 aspect-[3/2]">
                         {katasInfo
                             .sort((a, b) => b.rank.id - a.rank.id)
                             .map((e) => {

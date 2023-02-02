@@ -59,12 +59,12 @@ html {
     scroll-behavior: smooth;
 }
 
-:is(.swiper-button-next, .swiper-button-prev) {
-    color: #af4b67;
-}
-
 .codewar__solved-katas :is(.swiper-button-next, .swiper-button-prev) {
     margin-inline: -10rem;
+}
+
+:is(.swiper-button-next, .swiper-button-prev) {
+    @apply text-white backdrop-blur-xl p-6 rounded-md border-2 border-black backdrop-brightness-50;
 }
 
 /* .swiper-pagination-bullet {

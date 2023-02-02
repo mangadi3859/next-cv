@@ -4,10 +4,11 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "npm run tailwind && next build",
         "start": "next start",
         "lint": "next lint",
-        "tailwind:watch": "npx tailwind -i ./styles/global-tailwind.css -o ./styles/globals.css --watch"
+        "tailwind:watch": "npx tailwind -i ./styles/global-tailwind.css -o ./styles/globals.css --watch",
+        "tailwind": "npx tailwind -i ./styles/global-tailwind.css -o ./styles/globals.css"
     },
     "dependencies": {
         "@next/font": "13.1.5",
