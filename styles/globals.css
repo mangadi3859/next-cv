@@ -1953,6 +1953,14 @@ video {
   display: block;
 }
 
+.group\/input:has(input:not(:-moz-placeholder-shown):invalid) .group-\[\&\:has\(input\:not\(\:-moz-placeholder-shown\)\:invalid\)\]\/input\:block {
+  display: block;
+}
+
+.group\/input:has(input:not(:placeholder-shown):invalid) .group-\[\&\:has\(input\:not\(\:placeholder-shown\)\:invalid\)\]\/input\:block {
+  display: block;
+}
+
 .group\/animate.i-open .group-\[\&\.i-open\]\/animate\:scale-100 {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
