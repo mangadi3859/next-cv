@@ -89,8 +89,8 @@ export default function Contact() {
     }
 
     return (
-        <div className="form relative isolate">
-            <CircleOne />
+        <div data-animate className="form relative isolate group/animate">
+            <CircleOne className="transition-all duration-1000 delay-500 scale-0 group-[&.i-open]/animate:scale-100" />
 
             <h2 className="text-2xl flex flex-col justify-start items-center font-normal text-primary-300 text-center">Want to know more about me?</h2>
             <form onSubmit={handleSubmit} className="flex mt-4 flex-col items-center justify-start max-w-[40rem] mx-auto gap-4 p-2">

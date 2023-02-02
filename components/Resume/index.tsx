@@ -3,6 +3,7 @@ import { IServerProps } from "../../lib/utils";
 import Skill from "./Skill";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Autoplay, Navigation, Pagination } from "swiper";
+import { WaveSeparator, CircleThree } from "../Circle";
 import KataCard from "./KataCard";
 
 export default function Resume({ katas, user, katasInfo }: IServerProps["codewars"] & { [k: string]: any }) {
@@ -11,17 +12,16 @@ export default function Resume({ katas, user, katasInfo }: IServerProps["codewar
             <div className="card__nav mb-4 text-xl font-semibold phone:text-lg phone:text-center">Codewars Stats</div>
             <div className="card_tabs" data-slide="right">
                 <div className={`grid grid-cols-8 gap-6 items-center phone:grid-cols-1 phone:row-auto`}>
-                    <div className="flex col-span-2 phone:col-span-1 justify-center items-center flex-col rounded-md bg-white shadow-lg px-10 py-6">
-                        {/* <img src="https://avatars.githubusercontent.com/u/65892564?s=400" alt="avatar" className="aspect-square rounded-full overflow-hidden p-2 w-32 p-1 bg-neutral-400" /> */}
+                    <div data-animate className="flex relative group/animate isolate col-span-2 phone:col-span-1 justify-center items-center flex-col rounded-md bg-white shadow-lg px-10 py-6">
+                        <WaveSeparator className="transition-all duration-1000 delay-500 origin-bottom scale-y-0 group-[&.i-open]/animate:scale-y-100" />
                         <img src="/assets/avatar-2.jpg" alt="avatar" className="aspect-square rounded-full overflow-hidden w-32 p-1 bg-neutral-400" />
                         <p className="mt-2 text-xl font-semibold">{user.name}</p>
                         <p className="text-xs text-gray-700">
                             {user.ranks.overall.name} - {user.honor} Honors
                         </p>
                     </div>
-                    <div data-slide="left" data-animate className="card__tabs relative isolate flex col-span-6 group phone:col-span-1 justify-start phone:justify-between phone:items-center phone:content-center gap-4 items-start flex-grow flex-wrap bg-white shadow-lg px-10 py-6 h-full overflow-hidden">
-                        <div className="circle transition-all duration-500 scale-0 delay-300 group-[&.i-open]:scale-100 rounded-full opacity-30 translate-x-1/2 -translate-y-1/2 aspect-square w-3/4 bg-secondary-700 phone:bg-secondary-500 phone:opacity-20 absolute top-0 right-0 z-[-1]"></div>
-                        <div className="circle transition-all duration-500 scale-0 delay-300 group-[&.i-open]:scale-100 rounded-full opacity-30 -translate-x-1/2 translate-y-[5rem] phone:translate-y-[2rem] aspect-square w-1/3 bg-orange-300 phone:bg-orange-500 phone:opacity-20 absolute bottom-0 left-0 z-[-1]"></div>
+                    <div data-slide="left" data-animate className="card__tabs group/animate relative isolate flex col-span-6 phone:col-span-1 justify-start phone:justify-between phone:items-center phone:content-center gap-4 items-start flex-grow flex-wrap bg-white shadow-lg px-10 py-6 h-full overflow-hidden">
+                        <CircleThree className="transition-all duration-1000 delay-500 scale-0 group-[&.i-open]/animate:scale-100" />
                         {Object.keys(user.ranks.languages).map((e) => {
                             return <Skill key={e} name={e} rank={user.ranks.languages[e]} />;
                         })}
