@@ -43,6 +43,8 @@ export default function Contact() {
     }, []);
 
     function handleSubmit(e: any) {
+        e.preventDefault();
+
         let endpoint = "https://formsubmit.co/ajax/" + encodeURIComponent("2de97dad8e39025a35ada14e2703f376");
         btnRef.current.disabled = true;
 
@@ -75,13 +77,15 @@ export default function Contact() {
                 resultMsgRef.current.classList.add("block");
                 resultMsgRef.current.classList.remove("hidden");
 
+                setName("");
+                setEmail("");
+                setMessage("");
+
                 setTimeout(() => {
                     resultMsgRef.current.classList.remove("block");
                     resultMsgRef.current.classList.add("hidden");
                 }, 10000);
             });
-
-        e.preventDefault();
     }
 
     return (
