@@ -29,6 +29,8 @@ export default function Hero() {
     if (cardRef.current) {
         cardRef.current.style.bottom = `calc(25% - ${imgY * 2}px)`;
         cardRef.current.style.opacity = `${1 - imgY * 0.01}`;
+        cardPhoneRef.current.style.transform = `translateY(${imgY}px)`;
+        cardPhoneRef.current.style.opacity = `${1 - imgY * 0.01}`;
     }
 
     return (
