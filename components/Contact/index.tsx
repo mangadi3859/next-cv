@@ -43,21 +43,18 @@ export default function Contact() {
     }, []);
 
     function handleSubmit(e: any) {
-        let endpoint = "https://formsubmit.co/" + encodeURIComponent("2de97dad8e39025a35ada14e2703f376");
+        let endpoint = "https://formsubmit.co/ajax/" + encodeURIComponent("2de97dad8e39025a35ada14e2703f376");
         btnRef.current.disabled = true;
-
-        console.log(name, email);
 
         fetch(endpoint, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Accept: "application/json",
             },
             body: JSON.stringify({ name, email, message }),
         })
             .then((e) => {
-                console.log(e);
-
                 resultMsgRef.current.innerText = "Success";
                 resultMsgRef.current.classList.add("text-green-700");
                 resultMsgRef.current.classList.add("border-green-600");
