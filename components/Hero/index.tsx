@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import isClientReady from "../../lib/isClientReady";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 
 import AboutCard from "./AboutCard";
 import ContentCard from "./ContentCard";
@@ -43,7 +43,7 @@ export default function Hero() {
                 <ContentCard data-slide="left" />
             </div>
 
-            <Swiper ref={cardPhoneRef} spaceBetween={50} autoplay={{ delay: 8000 }} centeredSlides={true} modules={[Navigation, Autoplay]} navigation={{ enabled: true }} className="mt-5 phone:block hero__card hidden max-w-[60rem] w-[90%] rounded-md overflow-hidden hover:cursor-grab">
+            <Swiper ref={cardPhoneRef} pagination={true} spaceBetween={50} autoplay={{ delay: 8000 }} centeredSlides={true} modules={[Pagination, Autoplay]} className="mt-5 phone:block hero__card hidden max-w-[60rem] w-[90%] rounded-md overflow-hidden hover:cursor-grab">
                 <SwiperSlide className="h-full my-auto">
                     <AboutCard className="rounded-md shadow-md " />
                 </SwiperSlide>
