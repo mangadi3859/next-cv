@@ -10,7 +10,7 @@ export default function Skill(props: { name: string; rank: IServerProps["codewar
 
     return (
         <div className="resume__skillset flex flex-col justify-start items-start content-between">
-            <p className="w-full skill_lang font-normal text-lg relative pb-1 after:bg-secondary after:left-0 after:w-full after:absolute after:bottom-0 after:h-[2px] uppercase">{name}</p>
+            <p className="w-full skill_lang font-normal text-lg relative pb-1 after:bg-primary-600 after:left-0 after:w-full after:absolute after:bottom-0 after:h-[2px] uppercase">{name}</p>
             <ProgressBar value={value} />
             <p className="skill_text mt-2 text-sm">
                 {rank.name} - {rank.score}/{RANK_REQUIREMENTS[Math.abs(rank.rank)]} ({(value * 100).toFixed(1)}%)

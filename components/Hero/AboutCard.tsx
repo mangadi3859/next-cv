@@ -2,7 +2,7 @@ import { FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function AboutCard({ className, ...props }: any) {
     return (
-        <div className={`card__avatar p-6 flex flex-col aspect-[3/5] phone:aspect-auto phone:h-full w-full bg-primary-800 justify-start items-center ${className}`} {...props}>
+        <div className={`card__avatar p-6 flex flex-col aspect-[3/5] phone:aspect-auto phone:h-full w-full bg-primary-950 justify-start items-center ${className}`} {...props}>
             {/* <img src="/assets/avatar.jpg" alt="avatar" className="rounded-full aspect-square mb-6" /> */}
             <img src="/assets/avatar-2.jpg" alt="avatar" className="phone:max-w-[12rem] border-[5px] border-white phone:w-3/4 rounded-full aspect-square mb-6" />
             <p className="text-xl phone-lg:text-lg phone-lg:text-normal phone:text-xl font-bold">ISLA</p>

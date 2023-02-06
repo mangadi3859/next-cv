@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function KataCard({ kata, solved }: { kata: IKataInfo; solved?: IServerProps["codewars"]["katas"]["data"][0] }) {
     return (
-        <div className="px-8 py-6 phone:px-4 phone:py-3 kata_card aspect-[3/2] max-w-[30rem] w-full rounded-md shadow-lg bg-secondary-200 flex flex-col relative isolate after:absolute after:left-0 after:w-full after:bottom-0 after:h-full after:z-[-1] after:bg-gradient-to-tl after:from-transparent after:to-black after: after:opacity-50">
+        <div className="px-8 py-6 phone:px-4 phone:py-3 kata_card aspect-[3/2] max-w-[30rem] w-full rounded-md shadow-lg bg-primary-500 flex flex-col relative isolate after:absolute after:left-0 after:w-full after:bottom-0 after:h-full after:z-[-1] after:bg-gradient-to-tl after:from-transparent after:to-black after: after:opacity-50">
             <h2 className="text-white text-xl font-semibold mb-[-4px] phone:mb-[-6px] phone-lg:text-base phone:text-sm flex">{kata.name.length > 35 ? kata.name.slice(0, 35) + "..." : kata.name}</h2>
             <div className="flex gap-2 phone:mt-1">
                 <p className="text-white text-xs phone:text-[.55rem] phone:leading-3 font-light">

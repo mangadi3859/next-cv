@@ -106,7 +106,7 @@ export default function Contact() {
                     cols={30}
                     rows={5}
                     placeholder="Your Message"
-                    className="w-full px-3 py-2 border-2 bg-white bg-opacity-20 backdrop-blur-sm border-neutral-300 transition-all duration-100 focus:border-primary-400 outline-none text-neutral-600  [&:not(:placeholder-shown):invalid]:border-red-500"
+                    className="w-full px-3 py-2 border-2 bg-white bg-opacity-50 backdrop-blur-sm border-neutral-300 transition-all duration-100 focus:border-primary-400 outline-none text-neutral-600  [&:not(:placeholder-shown):invalid]:border-red-500"
                 ></textarea>
                 <Button ref={btnRef} className="ml-auto disabled:opacity-25 disabled:cursor-not-allowed text-xl rounded-sm bg-primary-300 text-white hover:bg-primary-200 hover:scale-[.98]">
                     Send Message

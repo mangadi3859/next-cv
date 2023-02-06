@@ -37,7 +37,7 @@ export default function Hero() {
         <header className="h-screen relative overflow-x-hidden isolate" id="hero">
             <div className="hero__banner absolute h-4/5 left-0 top-0 w-full z-[-1]">
                 <img ref={imgRef} src="/assets/hero-banner.jpeg" data-y={imgY} className="absolute w-full h-full object-cover object-center" />
-                <div className="w-full h-full bg-primary-200 bg-opacity-70 absolute"></div>
+                <div className="w-full h-full bg-primary-100 bg-opacity-70 absolute"></div>
             </div>
 
             <div ref={cardRef} className="phone:hidden phone:overflow-y-visible phone:flex-col phone:top-0 phone:bottom-[none] hero__card flex aspect-[20/9] absolute bottom-[25%] max-w-[60rem] w-[90%] left-1/2 translate-x-[-50%] rounded-md overflow-hidden shadow-md">

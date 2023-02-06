@@ -3,7 +3,7 @@ export function CircleOne({ className, ...props }: any) {
         <div className={`circle isolate absolute left-1/2 top-1/2 -translate-x-1/2 phone:h-full w-3/4 phone:w-auto -translate-y-1/2 opacity-30 z-[-1] ${className}`} {...props}>
             <svg className="w-auto relatice z-10 h-full" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g transform="translate(426.56007991355625 288.52652417830575)">
-                    <path className="fill-orange-300">
+                    <path className="fill-primary-300">
                         <animate
                             attributeName="d"
                             repeatCount="indefinite"
@@ -22,7 +22,7 @@ export function CircleOne({ className, ...props }: any) {
 
             <svg className="w-auto absolute inset-0 blur-md z-[-2] h-full" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g transform="translate(426.56007991355625 288.52652417830575)">
-                    <path className="fill-orange-300">
+                    <path className="fill-primary-300">
                         <animate
                             attributeName="d"
                             repeatCount="indefinite"
@@ -138,7 +138,7 @@ export function CircleThree({ className, ...props }: any) {
         <div className={`circle isolate absolute right-0 top-0 translate-x-1/2 phone:w-[200%] w-auto h-full phone:h-auto -translate-y-1/2 opacity-30 z-[-1] ${className}`} {...props}>
             <svg className="w-auto relatice z-10 h-full" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g transform="translate(426.56007991355625 288.52652417830575)">
-                    <path className="fill-orange-300">
+                    <path className="fill-primary-300">
                         <animate
                             attributeName="d"
                             repeatCount="indefinite"
@@ -157,7 +157,7 @@ export function CircleThree({ className, ...props }: any) {
 
             <svg className="w-auto absolute inset-0 blur-md z-[-2] h-full" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g transform="translate(426.56007991355625 288.52652417830575)">
-                    <path className="fill-orange-300">
+                    <path className="fill-primary-300">
                         <animate
                             attributeName="d"
                             repeatCount="indefinite"
@@ -182,7 +182,7 @@ export function CircleFour({ className, ...props }: any) {
         <div className={`circle isolate absolute right-0 top-4 translate-x-[70%] w-full phone:translate-x-[55%] phone:w-[200%] phone:h-auto -translate-y-1/4 opacity-30 z-[-1] ${className}`} {...props}>
             <svg className="w-auto relatice z-10 h-full" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g transform="translate(426.56007991355625 288.52652417830575)">
-                    <path className="fill-orange-300">
+                    <path className="fill-primary-300">
                         <animate
                             attributeName="d"
                             repeatCount="indefinite"
@@ -202,7 +202,7 @@ export function CircleFour({ className, ...props }: any) {
 
             <svg className="w-auto absolute inset-0 blur-md z-[-2] h-full" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <g transform="translate(426.56007991355625 288.52652417830575)">
-                    <path className="fill-orange-300">
+                    <path className="fill-primary-300">
                         <animate
                             attributeName="d"
                             repeatCount="indefinite"
